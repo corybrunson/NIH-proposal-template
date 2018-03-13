@@ -1,0 +1,4 @@
+# Have `git` ignore (not track) these files:
+
+# rendered documents
+*.pdf
