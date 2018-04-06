@@ -2,7 +2,7 @@
 title: NIH Grant Proposal Template
 author:
 - Jason Cory Brunson
-date: 6 March 2018
+date: 6 April 2018
 titlepage: false
 output:
   pdf_document:
@@ -22,16 +22,63 @@ header-includes: |
   \usepackage{booktabs}
   \usepackage{wrapfig}
   \usepackage[labelfont=bf]{caption}
-  \usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+  \usepackage[top=.5in,bottom=.5in,left=.5in,right=.5in]{geometry}
   \pagestyle{empty}
+  \DeclareSymbolFont{letters}{OML}{txr}{m}{it}
+  \usepackage{sectsty}
+  \usepackage{multirow}
+  \usepackage[normalem]{ulem}
+  \usepackage{array}
 ---
 
-\renewcommand{\subsection}[1]{\begin{description}\item[#1.]\end{description}}
+\newcommand{\att}[1]{
+\begin{center}
+\normalfont\bfseries\uppercase{#1}
+\end{center}
+\setcounter{section}{0}
+}
+
+\renewcommand{\thesection}{\Alph{section}.}
+\renewcommand{\thesubsection}{{\thesection}\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsection}.}
+
+\renewcommand{\section}[1]{
+\refstepcounter{section}
+{\normalsize\bfseries{\thesection\ }#1}
+\setcounter{subsection}{0}
+}
+\renewcommand{\subsection}[1]{
+\refstepcounter{subsection}
+{\normalsize\uline{\thesubsection\ #1}}
+\setcounter{subsubsection}{0}
+}
+\renewcommand{\subsubsection}[1]{
+\refstepcounter{subsubsection}
+{\normalsize\itshape{\thesubsubsection\ }#1}
+}
+
+<!--
+https://www.latextemplates.com/template/nih-grant-proposal
+https://www.soimort.org/notes/161117/
+https://github.com/Wandmalfarbe/pandoc-latex-template/issues/3#issuecomment-302539900
+https://verbosus.com/bibtex-style-examples.html
+-->
+
 
 \newpage
+\att{Project Summary}
+
+\lipsum[1]
 
 
-# Specific Aims
+\newpage
+\att{Introduction}
+
+The introduction is used to illustrate citations from the bibliography file [@article;@book;@incollection]
+
+
+\newpage
+\att{Specific Aims}
 
 \lipsum[2-4]
 
@@ -44,46 +91,55 @@ header-includes: |
 **Aim 3:**
 \lipsum[7]
 
+
 \newpage
+\att{Research Strategy}
 
-
-# A. Significance
+# Significance
 
 \lipsum[8-9]
 
-## A.1. Impact
+## Impact
 
 \lipsum[10]
 
-## A.2. Merit
+## Merit
 
 \lipsum[11]
 
 
-# B. Investigators
+# Investigators
 
-## B.1. First Author
+## First Author
 
 \lipsum[12]
 
-## B.2. Second Author
+## Second Author
 
 \lipsum[13]
 
 
-# C. Innovation
+# Innovation
 
 \lipsum[14-17]
 
 
-# D. Approach
+# Approach
 
 \lipsum[18]
 
-## D.1. Resources
+## Resources
 
 \lipsum[19-21]
 
-## D.2. Proposed methodology
+## Proposed methodology
 
 \lipsum[22-25]
+
+<!--
+pandoc nih-proposal.md -t latex -o nih-proposal.pdf -N --bibliography=nih-proposal.bib
+-->
+
+
+\newpage
+\att{Bibliography and References Cited}
