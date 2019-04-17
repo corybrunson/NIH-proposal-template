@@ -1,14 +1,8 @@
 ---
 title: NIH Grant Proposal Template
-author:
-- Jason Cory Brunson
-date: 6 April 2018
+author: Jason Cory Brunson
+date: 2019-04-17
 titlepage: false
-output:
-  pdf_document:
-    pandoc_args: [
-      "--no-tex-ligatures"
-    ]
 documentclass: article
 fontsize: 11pt
 header-includes: |
@@ -56,13 +50,6 @@ header-includes: |
 \refstepcounter{subsubsection}
 {\normalsize\itshape{\thesubsubsection\ }#1}
 }
-
-<!--
-https://www.latextemplates.com/template/nih-grant-proposal
-https://www.soimort.org/notes/161117/
-https://github.com/Wandmalfarbe/pandoc-latex-template/issues/3#issuecomment-302539900
-https://verbosus.com/bibtex-style-examples.html
--->
 
 
 \newpage
@@ -136,10 +123,22 @@ The introduction is used to illustrate citations from the bibliography file [@ar
 
 \lipsum[22-25]
 
-<!--
-pandoc nih-proposal.md -t latex -o nih-proposal.pdf -N --bibliography=nih-proposal.bib
--->
-
 
 \newpage
 \att{Bibliography and References Cited}
+
+
+<!--
+pandoc nih-proposal.md \
+  -t latex \
+  -o nih-proposal.pdf \
+  -N \
+  --bibliography=nih-proposal.bib
+-->
+
+<!--
+https://www.latextemplates.com/template/nih-grant-proposal
+https://www.soimort.org/notes/161117/
+https://github.com/Wandmalfarbe/pandoc-latex-template/issues/3#issuecomment-302539900
+https://verbosus.com/bibtex-style-examples.html
+-->
