@@ -25,7 +25,10 @@ header-includes: |
   \usepackage{array}
 ---
 
+\setlength\parskip{0pt plus 0pt}
+
 \newcommand{\att}[1]{
+\newpage
 \begin{center}
 \normalfont\bfseries\uppercase{#1}
 \end{center}
@@ -36,19 +39,24 @@ header-includes: |
 \renewcommand{\thesubsection}{{\thesection}\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsection}.}
 
+<!--
+\usepackage[compact]{titlesec}
+\titlespacing\section{0pt}{0.5em minus 0em plus 0em}{0.5em minus 0em plus 0em}
+-->
+
 \renewcommand{\section}[1]{
 \refstepcounter{section}
-{\normalsize\bfseries{\thesection\ }#1}
+{\normalsize\bfseries\uppercase{\thesection\ }#1}
 \setcounter{subsection}{0}
 }
 \renewcommand{\subsection}[1]{
 \refstepcounter{subsection}
-{\normalsize\uline{\thesubsection\ #1}}
+{\normalsize\bfseries\uline{\thesubsection\ #1}}
 \setcounter{subsubsection}{0}
 }
 \renewcommand{\subsubsection}[1]{
 \refstepcounter{subsubsection}
-{\normalsize\itshape{\thesubsubsection\ }#1}
+{\normalsize\itshape\uline{\thesubsubsection\ }#1}
 }
 
 
