@@ -24,6 +24,8 @@ header-includes: |
   \usepackage[normalem]{ulem}
   \usepackage{array}
   \usepackage{textcase}
+  \usepackage{perpage}
+  \MakePerPage{footnote}
 ---
 
 \setlength\parskip{0pt plus 0pt}
@@ -59,6 +61,8 @@ header-includes: |
   }
 }
 
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
 
 # Project Summary
 
@@ -67,7 +71,10 @@ header-includes: |
 
 # Introduction
 
-The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection]
+The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection].
+Citations are formatted according to the Citation Style Language (CSL) style `national-institute-of-health-research.csl`.[^style-url]
+
+[^style-url]: <https://github.com/citation-style-language/styles/blob/master/national-institute-of-health-research.csl>
 
 
 # Specific Aims
@@ -136,7 +143,8 @@ pandoc nih-proposal.md \
   -t latex \
   -o nih-proposal.pdf \
   -N \
-  --bibliography=nih-proposal.bib
+  --bibliography=nih-proposal.bib \
+  --csl=national-institute-of-health-research.csl
 -->
 
 <!--
