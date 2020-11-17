@@ -33,7 +33,7 @@ header-includes: |
 
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{{\thesection}\Alph{subsection}.}
-\renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsubsection}.}
 
 <!--
 \usepackage[compact]{titlesec}
