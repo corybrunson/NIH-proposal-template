@@ -1,7 +1,7 @@
 ---
 title: NIH Grant Proposal Template
 author: Jason Cory Brunson
-date: 2019-04-17
+date: 2020-11-17
 titlepage: false
 documentclass: article
 fontsize: 11pt
@@ -23,20 +23,14 @@ header-includes: |
   \usepackage{multirow}
   \usepackage[normalem]{ulem}
   \usepackage{array}
+  \usepackage{textcase}
 ---
 
 \setlength\parskip{0pt plus 0pt}
+\setlength\parindent{.5cm}
 
-\newcommand{\att}[1]{
-\newpage
-\begin{center}
-\normalfont\bfseries\uppercase{#1}
-\end{center}
-\setcounter{section}{0}
-}
-
-\renewcommand{\thesection}{\Alph{section}.}
-\renewcommand{\thesubsection}{{\thesection}\arabic{subsection}.}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{{\thesection}\Alph{subsection}.}
 \renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsection}.}
 
 <!--
@@ -45,35 +39,38 @@ header-includes: |
 -->
 
 \renewcommand{\section}[1]{
-\refstepcounter{section}
-{\normalsize\bfseries\uppercase{\thesection\ }#1}
-\setcounter{subsection}{0}
+  \newpage
+  \begin{center}
+  \normalsize\bfseries\MakeTextUppercase{#1}
+  \end{center}
+  \setcounter{section}{0}
 }
 \renewcommand{\subsection}[1]{
-\refstepcounter{subsection}
-{\normalsize\bfseries\uline{\thesubsection\ #1}}
-\setcounter{subsubsection}{0}
+  \refstepcounter{subsection}{
+    \setlength\parindent{0cm}
+    \normalsize\bfseries\uline{\thesubsection\ #1}
+  }
+  \setcounter{subsubsection}{0}
 }
 \renewcommand{\subsubsection}[1]{
-\refstepcounter{subsubsection}
-{\normalsize\itshape\uline{\thesubsubsection\ }#1}
+  \refstepcounter{subsubsection}{
+    \setlength\parindent{0cm}
+    \normalsize\itshape\uline{\thesubsubsection\ #1}
+  }
 }
 
 
-\newpage
-\att{Project Summary}
+# Project Summary
 
 \lipsum[1]
 
 
-\newpage
-\att{Introduction}
+# Introduction
 
-The introduction is used to illustrate citations from the bibliography file [@article;@book;@incollection]
+The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection]
 
 
-\newpage
-\att{Specific Aims}
+# Specific Aims
 
 \lipsum[2-4]
 
@@ -87,53 +84,51 @@ The introduction is used to illustrate citations from the bibliography file [@ar
 \lipsum[7]
 
 
-\newpage
-\att{Research Strategy}
+# Research Strategy
 
-# Significance
+## Significance
 
 \lipsum[8-9]
 
-## Impact
+### Impact
 
 \lipsum[10]
 
-## Merit
+### Merit
 
 \lipsum[11]
 
 
-# Investigators
+## Investigators
 
-## First Author
+### First Author
 
 \lipsum[12]
 
-## Second Author
+### Second Author
 
 \lipsum[13]
 
 
-# Innovation
+## Innovation
 
 \lipsum[14-17]
 
 
-# Approach
+## Approach
 
 \lipsum[18]
 
-## Resources
+### Resources
 
 \lipsum[19-21]
 
-## Proposed methodology
+### Proposed methodology
 
 \lipsum[22-25]
 
 
-\newpage
-\att{Bibliography and References Cited}
+# Bibliography and References Cited
 
 
 <!--
