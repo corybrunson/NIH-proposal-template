@@ -45,7 +45,7 @@ header-includes: |
   \begin{center}
   \normalsize\bfseries\MakeTextUppercase{#1}
   \end{center}
-  \setcounter{section}{0}
+  \setcounter{subsection}{0}
 }
 \renewcommand{\subsection}[1]{
   \refstepcounter{subsection}{
