@@ -1,7 +1,7 @@
 ---
 title: NIH Grant Proposal Template
 author: Jason Cory Brunson
-date: 2020-11-17
+date: 2020-12-27
 titlepage: false
 documentclass: article
 fontsize: 11pt
@@ -58,6 +58,20 @@ header-includes: |
   \refstepcounter{subsubsection}{
     \setlength\parindent{0cm}
     \normalsize\itshape\uline{\thesubsubsection\ #1}
+  }
+  \setcounter{paragraph}{0}
+}
+\renewcommand{\paragraph}[1]{
+  \refstepcounter{paragraph}{
+    \setlength\parindent{0cm}
+    \normalsize\bfseries{\theparagraph\ #1}
+  }
+  \setcounter{subparagraph}{0}
+}
+\renewcommand{\subparagraph}[1]{
+  \refstepcounter{subparagraph}{
+    \setlength\parindent{0cm}
+    \normalsize\itshape{\thesubparagraph\ #1}
   }
 }
 
