@@ -34,6 +34,8 @@ header-includes: |
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{{\thesection}\Alph{subsection}.}
 \renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsubsection}.}
+\renewcommand{\theparagraph}{{\thesubsubsection}\alph{paragraph}.}
+\renewcommand{\thesubparagraph}{{\theparagraph}\roman{subparagraph}.}
 
 <!--
 \usepackage[compact]{titlesec}
@@ -87,6 +89,25 @@ header-includes: |
 
 The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection].
 Citations are formatted according to the Citation Style Language (CSL) style `national-institute-of-health-research.csl`.[^style-url]
+(Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
+
+Below are illustrated each of the sectioning elements. In the rest of the document, only subsections and subsubsections are used within sections (attachments); paragraphs and subparagraphs are consistently formatted for convenience as needed, but should probably be used sparingly.
+
+## Subsection
+
+This is a subsection.
+
+### Subsubsection
+
+This is a subsubsection.
+
+#### Paragraph
+
+This is a paragraph.
+
+##### Subparagraph
+
+This is a subparagraph.
 
 [^style-url]: <https://github.com/citation-style-language/styles/blob/master/national-institute-of-health-research.csl>
 
@@ -153,15 +174,18 @@ Citations are formatted according to the Citation Style Language (CSL) style `na
 
 
 <!--
+# PDF (via LaTeX)
 pandoc nih-proposal.md \
   -t latex \
-  -o nih-proposal.pdf \
   -N \
   --bibliography=nih-proposal.bib \
-  --csl=national-institute-of-health-research.csl
+  --citeproc \
+  --csl=national-institute-of-health-research.csl \
+  -o nih-proposal.pdf
 -->
 
 <!--
+# sources
 https://www.latextemplates.com/template/nih-grant-proposal
 https://www.soimort.org/notes/161117/
 https://github.com/Wandmalfarbe/pandoc-latex-template/issues/3#issuecomment-302539900
