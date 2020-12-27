@@ -182,6 +182,13 @@ pandoc nih-proposal.md \
   --citeproc \
   --csl=national-institute-of-health-research.csl \
   -o nih-proposal.pdf
+# Microsoft Word (.docx)
+pandoc nih-proposal.md \
+  --bibliography=nih-proposal.bib \
+  --citeproc \
+  --csl=national-institute-of-health-research.csl \
+  --reference-doc=nih-reference.docx \
+  -o nih-proposal.docx
 -->
 
 <!--
