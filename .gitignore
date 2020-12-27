@@ -1,4 +1,2 @@
-# Have `git` ignore (not track) these files:
-
-# rendered documents
-*.pdf
+# Mac OS X hidden files
+.DS_Store
