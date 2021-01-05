@@ -31,16 +31,16 @@ header-includes: |
 \setlength\parskip{0pt plus 0pt}
 \setlength\parindent{.5cm}
 
-\renewcommand{\thesection}{}
-\renewcommand{\thesubsection}{{\thesection}\Alph{subsection}.}
-\renewcommand{\thesubsubsection}{{\thesubsection}\arabic{subsubsection}.}
-\renewcommand{\theparagraph}{{\thesubsubsection}\alph{paragraph}.}
-\renewcommand{\thesubparagraph}{{\theparagraph}\roman{subparagraph}.}
-
 <!--
 \usepackage[compact]{titlesec}
 \titlespacing\section{0pt}{0.5em minus 0em plus 0em}{0.5em minus 0em plus 0em}
 -->
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{{\thesubsection}.\arabic{subsubsection}}
+\renewcommand{\theparagraph}{{\thesubsubsection}.\alph{paragraph}}
+\renewcommand{\thesubparagraph}{{\theparagraph}.\roman{subparagraph}}
 
 \renewcommand{\section}[1]{
   \newpage
@@ -52,28 +52,28 @@ header-includes: |
 \renewcommand{\subsection}[1]{
   \refstepcounter{subsection}{
     \setlength\parindent{0cm}
-    \normalsize\bfseries\uline{\thesubsection\ #1}
+    \normalsize\bfseries\uline{\thesubsection.\ #1}
   }
   \setcounter{subsubsection}{0}
 }
 \renewcommand{\subsubsection}[1]{
   \refstepcounter{subsubsection}{
     \setlength\parindent{0cm}
-    \normalsize\itshape\uline{\thesubsubsection\ #1}
+    \normalsize\itshape\uline{\thesubsubsection.\ #1}
   }
   \setcounter{paragraph}{0}
 }
 \renewcommand{\paragraph}[1]{
   \refstepcounter{paragraph}{
     \setlength\parindent{0cm}
-    \normalsize\bfseries{\theparagraph\ #1}
+    \normalsize\bfseries{\theparagraph.\ #1}
   }
   \setcounter{subparagraph}{0}
 }
 \renewcommand{\subparagraph}[1]{
   \refstepcounter{subparagraph}{
     \setlength\parindent{0cm}
-    \normalsize\itshape{\thesubparagraph\ #1}
+    \normalsize\itshape{\thesubparagraph.\ #1}
   }
 }
 
