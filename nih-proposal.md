@@ -92,8 +92,8 @@ The introduction is used to illustrate citations from the bibliography file [@ar
 Citations are formatted according to the Citation Style Language (CSL) style `national-institute-of-health-research.csl`.[^style-url]
 (Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
 
-While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their \LaTeX\ definitions.
-In this template, the `\underline` command is redefined to `\uline` from the **ulem** package.
+While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their LaTeX definitions.
+Because the constructor invokes the `\underline` command to render LaTeX documents, this command is redefined to the more convenient `\uline` from the **ulem** package in the front matter.
 
 Below are illustrated each of the sectioning elements. In the rest of the document, only subsections and subsubsections are used within sections (attachments); paragraphs and subparagraphs are consistently formatted for convenience as needed, but should probably be used sparingly.
 
