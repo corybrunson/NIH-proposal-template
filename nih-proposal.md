@@ -22,6 +22,7 @@ header-includes: |
   \usepackage{sectsty}
   \usepackage{multirow}
   \usepackage[normalem]{ulem}
+  \renewcommand{\underline}{\uline}
   \usepackage{array}
   \usepackage{textcase}
   \usepackage{perpage}
@@ -90,6 +91,9 @@ header-includes: |
 The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection].
 Citations are formatted according to the Citation Style Language (CSL) style `national-institute-of-health-research.csl`.[^style-url]
 (Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
+
+While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their \LaTeX\ definitions.
+In this template, the `\underline` command is redefined to `\uline` from the **ulem** package.
 
 Below are illustrated each of the sectioning elements. In the rest of the document, only subsections and subsubsections are used within sections (attachments); paragraphs and subparagraphs are consistently formatted for convenience as needed, but should probably be used sparingly.
 
