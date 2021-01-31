@@ -29,9 +29,6 @@ header-includes: |
   \MakePerPage{footnote}
 ---
 
-\setlength\parskip{0pt plus 0pt}
-\setlength\parindent{.5cm}
-
 <!--
 \usepackage[compact]{titlesec}
 \titlespacing\section{0pt}{0.5em minus 0em plus 0em}{0.5em minus 0em plus 0em}
@@ -48,7 +45,17 @@ header-includes: |
   \begin{center}
   \normalsize\bfseries\MakeTextUppercase{#1}
   \end{center}
+  %section counter (nested resets)
   \setcounter{subsection}{0}
+  %float counters
+  \setcounter{equation}{0}
+  \setcounter{figure}{0}
+  \setcounter{table}{0}
+  %footnote counters
+  \setcounter{footnote}{0}
+  %spacing
+  \setlength\parskip{0pt plus 0pt}
+  \setlength\parindent{.5cm}
 }
 \renewcommand{\subsection}[1]{
   \refstepcounter{subsection}{
