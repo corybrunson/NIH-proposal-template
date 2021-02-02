@@ -41,7 +41,7 @@ header-includes: |
 \renewcommand{\thesubparagraph}{{\theparagraph}.\roman{subparagraph}}
 
 \renewcommand{\section}[1]{
-  \newpage
+  \clearpage
   \begin{center}
   \normalsize\bfseries\MakeTextUppercase{#1}
   \end{center}
