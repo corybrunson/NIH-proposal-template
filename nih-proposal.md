@@ -1,7 +1,7 @@
 ---
 title: NIH Grant Proposal Template
 author: Jason Cory Brunson
-date: 2020-12-27
+date: 2021-02-07
 titlepage: false
 documentclass: article
 fontsize: 11pt
@@ -86,6 +86,41 @@ header-includes: |
 }
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+
+4+ months out:
+
+- [ ] Who will be key personnel (e.g. mentors, collaborators, consultants)?
+- [ ] Decide grant series, FOA (PA or RFA), and submission deadline
+- [ ] Obtain (current) official instructions[^instructions]
+- [ ] Who will administer the process and submit the proposal?
+- [ ] What attachments are required, with descriptions and page limits?
+- [ ] Know who will write supporting documents (e.g. mentor statements, letters of support, institutional environment, institutional commitment)?
+- [ ] Select or schedule preliminary work (within existing research program)
+
+3 months out:
+
+- [ ] Draft and Specific Aims and distribute among key personnel
+- [ ] Initialize bibliography (e.g. Zotero)
+- [ ] Decide grant activity code, center/institute, and program (e.g. NOTI)
+- [ ] Contact program officer
+- [ ] Draft resource attachments (e.g. Facilities and Other Resources, Equipment, Budget Justification)
+- [ ] Request letters of reference
+
+2 months out:
+
+- [ ] Revise and update attachments
+- [ ] Draft project-related attachments (e.g. Candidate Information, Research Strategy), incorporating preliminary work
+- [ ] Finalize & confirm grant activity code, center/institute, and program
+- [ ] Request supporting documents
+
+1 month out:
+
+- [ ] Revise and update attachments
+- [ ] Update NIH biosketch
+- [ ] Write summary attachments (e.g. Project Summary/Abstract, Project Narrative)
+
+[^instructions]: <https://grants.nih.gov/grants/how-to-apply-application-guide.html>
 
 
 # Project Summary
