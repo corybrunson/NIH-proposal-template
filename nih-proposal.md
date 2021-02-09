@@ -131,7 +131,7 @@ header-includes: |
 # Introduction
 
 The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection].
-Citations are formatted according to the Citation Style Language (CSL) style `national-institute-of-health-research.csl`.[^style-url]
+Citations are formatted according to the Citation Style Language (CSL) style `council-of-science-editors.csl`,[^style-url] which retains information about conference proceedings and working papers (for example) lost by the previously-used `national-institute-of-health-research.csl`.
 (Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
 
 While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their LaTeX definitions.
@@ -155,7 +155,7 @@ This is a paragraph.
 
 This is a subparagraph.
 
-[^style-url]: <https://github.com/citation-style-language/styles/blob/master/national-institute-of-health-research.csl>
+[^style-url]: <https://github.com/citation-style-language/styles/blob/master/council-of-science-editors.csl>
 
 
 # Specific Aims
@@ -226,13 +226,13 @@ pandoc nih-proposal.md \
   -N \
   --bibliography=nih-proposal.bib \
   --citeproc \
-  --csl=national-institute-of-health-research.csl \
+  --csl=council-of-science-editors.csl \
   -o nih-proposal.pdf
 # Microsoft Word (.docx)
 pandoc nih-proposal.md \
   --bibliography=nih-proposal.bib \
   --citeproc \
-  --csl=national-institute-of-health-research.csl \
+  --csl=council-of-science-editors.csl \
   --reference-doc=nih-reference.docx \
   -o nih-proposal.docx
 -->
