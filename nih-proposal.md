@@ -10,7 +10,6 @@ header-includes: |
   \renewcommand*\familydefault{\sfdefault}
   \usepackage[T1]{fontenc}
   \linespread{1.05}
-  \usepackage{lipsum}
   \usepackage{amsfonts, amsmath, amsthm, amssymb}
   \usepackage{graphicx}
   \usepackage{booktabs}
@@ -88,60 +87,48 @@ header-includes: |
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
 
-4+ months out:
+Attachments checklist (K series):[^page-limits]
 
-- [ ] Who will be key personnel (e.g. mentors, collaborators, consultants)?
-- [ ] Decide grant series, FOA (PA or RFA), and submission deadline
-- [ ] Obtain (current) official instructions[^instructions]
-- [ ] Who will administer the process and submit the proposal?
-- [ ] What attachments are required, with descriptions and page limits?
-- [ ] Know who will write supporting documents (e.g. mentor statements, letters of support, institutional environment, institutional commitment)?
-- [ ] Select or schedule preliminary work (within existing research program)
+- [ ] Project Summary or Abstract
+- [ ] Project Narrative
+- [ ] Introduction to Resubmission or Revision Application (when applicable)
+- [ ] Candidate Information and Goals for Career Development and Research Strategy
+- [ ] Specific Aims
+- [ ] Training in the Responsible Conduct of Research
+- [ ] Candidate's Plan to Provide Mentoring
+- [ ] Plans and Statements of Mentor and Co-mentor(s)
+- [ ] Letters of Support from Collaborators, Contributors, and Consultants
+- [ ] Description of Institutional Environment
+- [ ] Institutional Commitment to Candidate's Research Career Development
+- [ ] Biographical Sketch[^biosketch]
 
-3 months out:
-
-- [ ] Draft and Specific Aims and distribute among key personnel
-- [ ] Initialize bibliography (e.g. Zotero)
-- [ ] Decide grant activity code, center/institute, and program (e.g. NOTI)
-- [ ] Contact program officer
-- [ ] Draft resource attachments (e.g. Facilities and Other Resources, Equipment, Budget Justification)
-- [ ] Request letters of reference
-
-2 months out:
-
-- [ ] Revise and update attachments
-- [ ] Draft project-related attachments (e.g. Candidate Information, Research Strategy), incorporating preliminary work
-- [ ] Finalize & confirm grant activity code, center/institute, and program
-- [ ] Request supporting documents
-
-1 month out:
-
-- [ ] Revise and update attachments
-- [ ] Update NIH biosketch
-- [ ] Write summary attachments (e.g. Project Summary/Abstract, Project Narrative)
-
-[^instructions]: <https://grants.nih.gov/grants/how-to-apply-application-guide.html>
+[^page-limits]: following the NIH page on Page Limits: <https://grants.nih.gov/grants/how-to-apply-application-guide/format-and-write/page-limits.htm>
+[^biosketch]: templates: Word (NIH) <https://grants.nih.gov/grants/forms/biosketch.htm>, LaTeX <https://github.com/corybrunson/latex-nihbiosketch>
 
 
 # Project Summary
 
-\lipsum[1]
+This attachment is used to illustrate various style elements.
 
+## Citations
 
-# Introduction
+Inline citations [@article; @book; @incollection] can be tagged from the bibliography file.
 
-The introduction is used to illustrate citations from the bibliography file [@article; @book; @incollection].
+### Formatting
+
 Citations are formatted according to the Citation Style Language (CSL) style `council-of-science-editors.csl`,[^style-url] which retains information about conference proceedings and working papers (for example) lost by the previously-used `national-institute-of-health-research.csl`.
 (Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
+
+## Underlined text
 
 While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their LaTeX definitions.
 Because the constructor invokes the `\underline` command to render LaTeX documents, this command is redefined to the more convenient `\uline` from the **ulem** package in the front matter.
 
-Below are illustrated each of the sectioning elements. In the rest of the document, only subsections and subsubsections are used within sections (attachments); paragraphs and subparagraphs are consistently formatted for convenience as needed, but should probably be used sparingly.
+## Headers and sections
 
-## Subsection
+Top-level headers or sections are treated as separate attachments and begin on new pages.
 
-This is a subsection.
+The remaining levels are subsections (such as this one), subsubsections, paragraphs, and subparagraphs (illustrated below). These are consistently formatted for convenience, but lower levels should probably be used sparingly.
 
 ### Subsubsection
 
@@ -155,65 +142,27 @@ This is a paragraph.
 
 This is a subparagraph.
 
+Custom formatting of inline paragraph headers, as is done in the Specific Aims attachment, may be preferred to paragraph or subparagraph headers that occupy whole lines.
+
 [^style-url]: <https://github.com/citation-style-language/styles/blob/master/council-of-science-editors.csl>
 
 
 # Specific Aims
 
-\lipsum[2-4]
+This template is being prepared to accomplish three research aims:
 
 **Aim 1:**
-\lipsum[5]
+Reduce time spent formatting, consolidating, and revising NIH applications by allowing researchers to work entirely in plain-text Markdown[^md] during the writing process.
+
+[^md]: <https://www.markdownguide.org/>
 
 **Aim 2:**
-\lipsum[6]
+Raise awareness of the "Markdown + Pandoc"[^pandoc] workflow among researchers who might benefit from adopting it.
 
 **Aim 3:**
-\lipsum[7]
+Add a line item to my personal CV.
 
-
-# Research Strategy
-
-## Significance
-
-\lipsum[8-9]
-
-### Impact
-
-\lipsum[10]
-
-### Merit
-
-\lipsum[11]
-
-
-## Investigators
-
-### First Author
-
-\lipsum[12]
-
-### Second Author
-
-\lipsum[13]
-
-
-## Innovation
-
-\lipsum[14-17]
-
-
-## Approach
-
-\lipsum[18]
-
-### Resources
-
-\lipsum[19-21]
-
-### Proposed methodology
-
-\lipsum[22-25]
+[^pandoc]: <https://pandoc.org/MANUAL.html>
 
 
 # Bibliography and References Cited

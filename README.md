@@ -20,7 +20,7 @@ pandoc nih-proposal.md \
   -o nih-proposal.pdf
 ```
 
-Alternatively, use the following call to produce a Microsoft Word (`.docx`) file:
+Alternatively, use the following call to produce a Microsoft Word (`.docx`) file, using the style template "nih-reference.docx":
 
 ```bash
 pandoc nih-proposal.md \
