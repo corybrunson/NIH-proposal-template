@@ -58,29 +58,33 @@ header-includes: |
 }
 \renewcommand{\subsection}[1]{
   \refstepcounter{subsection}{
+    \vspace{1ex}
     \setlength\parindent{0cm}
-    \normalsize\bfseries\uline{\thesubsection.\ #1}
+    \large\bfseries{#1}
   }
   \setcounter{subsubsection}{0}
 }
 \renewcommand{\subsubsection}[1]{
   \refstepcounter{subsubsection}{
+    \vspace{1ex}
     \setlength\parindent{0cm}
-    \normalsize\itshape\uline{\thesubsubsection.\ #1}
+    \normalsize\bfseries{#1}
   }
   \setcounter{paragraph}{0}
 }
 \renewcommand{\paragraph}[1]{
   \refstepcounter{paragraph}{
+    \vspace{1ex}
     \setlength\parindent{0cm}
-    \normalsize\bfseries{\theparagraph.\ #1}
+    \normalsize\itshape{#1}
   }
   \setcounter{subparagraph}{0}
 }
 \renewcommand{\subparagraph}[1]{
   \refstepcounter{subparagraph}{
+    \vspace{1ex}
     \setlength\parindent{0cm}
-    \normalsize\itshape{\thesubparagraph.\ #1}
+    \normalsize{#1}
   }
 }
 
