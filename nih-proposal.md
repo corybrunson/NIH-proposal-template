@@ -123,6 +123,21 @@ Inline citations [@article; @book; @incollection] can be tagged from the bibliog
 Citations are formatted according to the Citation Style Language (CSL) style `council-of-science-editors.csl`,[^style-url] which retains information about conference proceedings and working papers (for example) lost by the previously-used `national-institute-of-health-research.csl`.
 (Note that abstract symbols are used for footnote superscripts in order to avoid confusion with numerical citation superscripts.)
 
+## Figures
+
+Wrapping of figures is enabled by the `wrapfig` package, though it fails to translate to MS Word.
+Use the optional `lineheight` argument to adjust the number of narrowed lines (set to `20` for Figure \ref{fig:scientific-method}).
+
+\begin{wrapfigure}[20]{r}{0.33\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{330px-The_Scientific_Method.png}
+\caption{A circular diagram of steps in the scientific method, from Wikimedia Commons.}
+\label{fig:scientific-method}
+\end{wrapfigure}
+
+Citations are not yet supported within captions, since they are indirectly formatted as superscripts and explicit bibliographical entries.
+Instead, cite sources in the main text [@Efbrazil2021].
+
 ## Underlined text
 
 While inline <span class="underline">underlined text</span> must be rendered using the Pandoc constructor, style elements like section headers can be underlined in their LaTeX definitions.
@@ -173,6 +188,14 @@ Add a line item to my personal CV.
 
 
 <!--
+# LaTeX
+pandoc nih-proposal.md \
+  -t latex \
+  -N \
+  --bibliography=nih-proposal.bib \
+  --citeproc \
+  --csl=council-of-science-editors.csl \
+  -o nih-proposal.tex
 # PDF (via LaTeX)
 pandoc nih-proposal.md \
   -t latex \
